@@ -1,0 +1,21 @@
+{
+  "name": "npmx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "deploy": "git push && git push --tags && npm publish"
+  },
+  "keywords": [],
+  "author": "Rajasegar Chandran <rajasegar.c@gmail.com>",
+  "license": "MIT",
+  repository: "https://github.com/rajasegar/npmx",
+  "dependencies": {
+    "@terminal-junkies/neo-blessed": "^1.0.4",
+    "blessed-themes": "^1.1.0",
+    "libnpmsearch": "^3.0.0",
+    "minimist": "^1.2.5"
+  }
+}
