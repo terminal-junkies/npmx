@@ -21,14 +21,14 @@ const program = blessed.program();
 program.bg(theme.program.bg);
 program.fg(theme.program.fg);
 
-const logo = blessed.bigtext({
+const logo = blessed.box({
   parent: screen,
   border: 'line',
   content: 'npmx',
   top: 0,
   left: 0,
   width: '35%',
-  height: '30%',
+  height: '10%',
   border: theme.logo.border,
   style: theme.logo.style,
 });

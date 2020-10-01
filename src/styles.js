@@ -48,8 +48,12 @@ module.exports = function (colors) {
       style: {
         fg: foreground,
         bg: background,
+        item: {
+          bg: foreground,
+          fg: background,
+        },
         selected: {
-          bg: yellow,
+          bg: green,
           fg: background,
         },
         border: {
@@ -80,7 +84,7 @@ module.exports = function (colors) {
     taskList: {
       border: {
         type: 'line',
-        fg: green,
+        fg: foreground,
         bg: background,
       },
       style: {
@@ -92,7 +96,7 @@ module.exports = function (colors) {
         },
         focus: {
           border: {
-            fg: red,
+            fg: green,
           },
         },
         label: {
@@ -104,7 +108,7 @@ module.exports = function (colors) {
     searchResults: {
       border: {
         type: 'line',
-        fg: green,
+        fg: foreground,
         bg: background,
       },
       style: {

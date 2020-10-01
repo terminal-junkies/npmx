@@ -24,10 +24,10 @@ module.exports = function (screen, pkg) {
     tags: true,
   });
 
-  const regex = /https:\/\/github.com\/(\w+)\/(\w+)#readme/gm;
+  const regex = /https:\/\/github.com\/(\w+)\/(\w+)/gm;
   let m;
 
-  while ((m = regex.exec(pkg.links.homepage)) !== null) {
+  while ((m = regex.exec(pkg.links.repository)) !== null) {
     // This is necessary to avoid infinite loops with zero-width matches
     if (m.index === regex.lastIndex) {
       regex.lastIndex++;
@@ -36,7 +36,11 @@ module.exports = function (screen, pkg) {
     const [, user, repo] = m;
 
     githubReadme(user, repo, (err, md) => {
-      readme.setMarkdown(md);
+      if(err) {
+        readme.setMarkdown(err);
+      } else {
+        readme.setMarkdown(md);
+      }
       readme.focus();
       screen.render();
     });
