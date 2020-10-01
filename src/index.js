@@ -1,14 +1,22 @@
 'use strict';
 
+
 const blessed = require('@terminal-junkies/neo-blessed');
+const search = require('libnpmsearch');
+const minimist = require('minimist')
 const screen = blessed.screen({ fullUnicode: true });
 
-const options = require('minimist')(process.argv.slice(2));
+const options = minimist(process.argv.slice(2));
 const scheme = options.theme || 'Dracula';
 const colors = require(`blessed-themes/themes/${scheme}`);
-const theme = require('./src/styles')(colors.colors);
-const search = require('libnpmsearch');
+const theme = require('./styles')(colors.colors);
 
+const initHomePage = require('./pages/home');
+const initPackagePage = require('./pages/package');
+
+
+
+module.exports = function() {
 const program = blessed.program();
 program.bg(theme.program.bg);
 program.fg(theme.program.fg);
@@ -26,19 +34,6 @@ const logo = blessed.bigtext({
 });
 
 
-const taskList = blessed.list({
-  parent: screen,
-  top: '30%+1',
-  left: 0,
-  width: '35%',
-  height: '30%',
-  border: 'line',
-  label: 'Project Tasks',
-  keys: true,
-  vi: true,
-  style: theme.taskList.style,
-  border: theme.taskList.border,
-});
 
 const searchBox = blessed.form({
   parent: screen,
@@ -48,7 +43,7 @@ const searchBox = blessed.form({
   height: '10%',
   border: theme.searchBox.border,
   style: theme.searchBox.style,
-  content: 'Search packages',
+  content: ' Search packages (Press Enter to search): ',
   keys: true,
 });
 
@@ -67,9 +62,11 @@ const text = blessed.textbox({
   inputOnFocus: true,
 });
 
+let packages = [];
 text.on('submit', (data) => {
   if (data) {
     search(data).then(results => {
+      packages = results;
       const temp = results.map(r => r.name);
       searchResults.setItems(temp);
       searchResults.focus();
@@ -93,33 +90,21 @@ const searchResults = blessed.list({
   border: theme.searchResults.border,
 });
 
-const footer = blessed.listbar({
-  parent: screen,
-  bottom: 0,
-  left: 0,
-  right: 0,
-  height: 'shrink',
-  mouse: true,
-  keys: true,
-  border: 'line',
-  vi: true,
-  style: theme.footer.style,
-  commands: {
-    search: {
-      keys: ['/'],
-      callback: function () {
-        screen.render();
-      },
-    },
-    quit: {
-      keys: ['q'],
-      callback: function () {},
-    },
-  },
+
+
+searchResults.on('select', node => {
+  let idx = searchResults.getItemIndex(node);
+  const pkg = packages[idx];
+  const { content } = node;
+  searchResults.detach();
+
+  const packagePage = initPackagePage(screen, pkg);
+  homePage.hide();
+  packagePage.show();
+
 });
 
-const pkg = require('./package.json');
-taskList.setItems(Object.keys(pkg.scripts));
+
 
 screen.key('q', () => {
   return process.exit(0);
@@ -131,10 +116,13 @@ screen.key(['/'], () => {
 
 screen.append(logo);
 screen.append(searchBox);
-screen.append(taskList);
-screen.append(searchResults);
-screen.append(footer);
 
-taskList.focus();
+
+screen.append(searchResults);
+
+const homePage = initHomePage(screen);
+homePage.show();
 
 screen.render();
+};
+

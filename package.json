@@ -1,21 +1,42 @@
 {
   "name": "npmx",
   "version": "1.0.0",
-  "description": "",
+  "description": "An advanced CLI for npm",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "deploy": "git push && git push --tags && npm publish"
   },
-  "keywords": [],
+  "bin": {
+    "npmx": "bin/npmx.js"
+  },
+  "keywords": [
+    "npm",
+    "npm cli",
+    "npmx",
+    "cli",
+    "terminal"
+  ],
   "author": "Rajasegar Chandran <rajasegar.c@gmail.com>",
   "license": "MIT",
-  repository: "https://github.com/rajasegar/npmx",
+  "repository": "https://github.com/rajasegar/npmx",
   "dependencies": {
     "@terminal-junkies/neo-blessed": "^1.0.4",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.8.20",
     "blessed-themes": "^1.1.0",
+    "github-readme": "^1.0.0",
+    "libnpm": "^3.0.1",
     "libnpmsearch": "^3.0.0",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "module-alias": "^2.2.2"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "utils": "src/utils"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.0"
   }
 }

@@ -197,10 +197,10 @@ module.exports = function (colors) {
         },
       },
     },
-    devdeps: {
+    terminal: {
       border: {
         type: 'line',
-        fg: green,
+        fg: foreground,
         bg: background,
       },
       style: {
@@ -208,7 +208,7 @@ module.exports = function (colors) {
         fg: foreground,
         focus: {
           border: {
-            fg: red,
+            fg: green,
           },
         },
         selected: {
@@ -224,7 +224,7 @@ module.exports = function (colors) {
     box: {
       border: {
         type: 'line',
-        fg: green,
+        fg: foreground,
         bg: background,
       },
       style: {
@@ -232,7 +232,7 @@ module.exports = function (colors) {
         fg: foreground,
         focus: {
           border: {
-            fg: red,
+            fg: green,
           },
         },
         label: {
