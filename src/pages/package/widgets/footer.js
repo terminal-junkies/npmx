@@ -3,25 +3,27 @@
 const blessed = require('blessed');
 const neoblessed = require('@terminal-junkies/neo-blessed');
 const getTheme = require('utils/getTheme');
-module.exports = function(screen, pkg) {
+
+module.exports = function (screen, pkg) {
   const packageName = pkg.name;
   const theme = getTheme();
 
   function runCommand(cmd) {
-
-    const { terminal: { border, style }} = theme;
+    const {
+      terminal: { border, style },
+    } = theme;
     const terminal = neoblessed.terminal({
       parent: screen,
       top: 'center',
       left: 'center',
       width: '50%',
       height: '50%',
-      border, 
+      border,
       style,
       label: cmd,
       fullUnicode: true,
       screenKeys: false,
-      cwd: process.env.PWD
+      cwd: process.env.PWD,
     });
     screen.append(terminal);
     screen.render();
@@ -62,14 +64,14 @@ module.exports = function(screen, pkg) {
           runCommand(command);
         },
       },
-      "install-global": {
+      'install-global': {
         keys: ['l'],
         callback: function () {
           const command = `npm install -g ${packageName}`;
           runCommand(command);
         },
       },
-      "install-dev": {
+      'install-dev': {
         keys: ['d'],
         callback: function () {
           const command = `npm install --save-dev ${packageName}`;

@@ -3,7 +3,7 @@
 const blessed = require('@terminal-junkies/neo-blessed');
 const getTheme = require('utils/getTheme');
 
-module.exports = function(screen, pkg) {
+module.exports = function (screen, pkg) {
   const theme = getTheme();
 
   const { border, style } = theme.box;
@@ -15,8 +15,7 @@ module.exports = function(screen, pkg) {
     label: ` ${pkg.name} `,
     content: ` ${pkg.description} `,
     border,
-    style
-    
+    style,
   });
 
   return box;

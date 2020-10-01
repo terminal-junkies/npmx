@@ -3,13 +3,11 @@
 const blessed = require('@terminal-junkies/neo-blessed');
 const getTheme = require('utils/getTheme');
 
-module.exports = function(screen, pkg) {
-
+module.exports = function (screen, pkg) {
   const theme = getTheme();
 
   const {
-    primary: { background, foreground },
-    normal: { red, green, blue, yellow, magenta, cyan },
+    normal: { red, blue },
   } = theme.colors;
 
   const sidebar = blessed.box({
@@ -41,7 +39,7 @@ module.exports = function(screen, pkg) {
   {${blue}-fg}{bold}{underline}Last publish{/}
   ${pkg.date.toString()}
   {${blue}-fg}{bold}{underline}Collaborators{/}
-  ${pkg.maintainers.map(m => m.username).join(',')}
+  ${pkg.maintainers.map((m) => m.username).join(',')}
   {${blue}-fg}{bold}{underline}Keywords{/}
   ${pkg.keywords.join('\n  ')}
   `;
@@ -49,4 +47,4 @@ module.exports = function(screen, pkg) {
   sidebar.setContent(_content);
 
   return sidebar;
-}
+};

@@ -3,7 +3,7 @@
 module.exports = function (colors) {
   const {
     primary: { background, foreground },
-    normal: { red, green, blue, yellow, magenta, cyan },
+    normal: { red, green, blue, cyan },
   } = colors;
 
   return {

@@ -1,27 +1,24 @@
 'use strict';
 
-const blessed = require('@terminal-junkies/neo-blessed');
-
-
-module.exports = function(screen) {
-
-
-const taskList = require('./widgets/taskList')(screen);
-const footer = require('./widgets/footer')(screen);
+module.exports = function (screen) {
+  const taskList = require('./widgets/taskList')(screen);
+  const footer = require('./widgets/footer')(screen);
+  const nodeInfo = require('./widgets/nodeInfo')(screen);
 
   function hide() {
     taskList.detach();
     footer.detach();
     screen.render();
+    nodeInfo.render();
   }
 
   function show() {
     screen.append(taskList);
     screen.append(footer);
+    screen.append(nodeInfo);
     taskList.focus();
     screen.render();
   }
 
   return { hide, show };
-
 };

@@ -28,7 +28,6 @@
     "blessed-themes": "^1.1.0",
     "github-readme": "^1.0.0",
     "libnpm": "^3.0.1",
-    "libnpmsearch": "^3.0.0",
     "minimist": "^1.2.5",
     "module-alias": "^2.2.2"
   },
@@ -37,6 +36,10 @@
     "utils": "src/utils"
   },
   "devDependencies": {
-    "chalk": "^4.1.0"
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2"
   }
 }

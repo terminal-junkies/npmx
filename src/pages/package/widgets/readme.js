@@ -36,8 +36,8 @@ module.exports = function (screen, pkg) {
     const [, user, repo] = m;
 
     githubReadme(user, repo, (err, md) => {
-      if(err) {
-          readme.setMarkdown('Some error occurred in fetching README');
+      if (err) {
+        readme.setMarkdown('Some error occurred in fetching README');
       } else {
         readme.setMarkdown(md);
       }
@@ -45,8 +45,6 @@ module.exports = function (screen, pkg) {
       screen.render();
     });
   }
-
-
 
   readme.setMarkdown(`${pkg.description}`);
 

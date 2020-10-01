@@ -3,7 +3,8 @@
 const blessed = require('blessed');
 const getTheme = require('utils/getTheme');
 const runCommand = require('utils/runCommand');
-module.exports = function(screen) {
+
+module.exports = function (screen) {
   const theme = getTheme();
   const footer = blessed.listbar({
     parent: screen,

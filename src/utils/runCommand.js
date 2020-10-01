@@ -4,21 +4,22 @@ const neoblessed = require('@terminal-junkies/neo-blessed');
 const getTheme = require('./getTheme');
 
 module.exports = function runCommand(screen, cmd) {
-
   const theme = getTheme();
-  const { terminal: { border, style }} = theme;
+  const {
+    terminal: { border, style },
+  } = theme;
   const terminal = neoblessed.terminal({
     parent: screen,
     top: 'center',
     left: 'center',
     width: '50%',
     height: '50%',
-    border, 
+    border,
     style,
     label: cmd,
     fullUnicode: true,
     screenKeys: false,
-    cwd: process.env.PWD
+    cwd: process.env.PWD,
   });
   screen.append(terminal);
   screen.render();
@@ -29,4 +30,4 @@ module.exports = function runCommand(screen, cmd) {
   });
 
   terminal.pty.write(`${cmd}\r\n`);
-}
+};
