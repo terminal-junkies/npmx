@@ -10,11 +10,11 @@ module.exports = function (screen, pkg) {
   const { border, style } = theme.box;
   const readme = contrib.markdown({
     parent: screen,
-    label: ` ${pkg.name} `,
-    top: '30%+1',
+    label: ' README ',
+    top: '20%+1',
     left: '0',
     width: '70%',
-    height: '65%-1',
+    height: '75%-1',
     border,
     style,
     keys: true,
@@ -37,7 +37,7 @@ module.exports = function (screen, pkg) {
 
     githubReadme(user, repo, (err, md) => {
       if(err) {
-        readme.setMarkdown(err);
+          readme.setMarkdown('Some error occurred in fetching README');
       } else {
         readme.setMarkdown(md);
       }
