@@ -60,10 +60,16 @@ module.exports = function () {
 
   let packages = [];
   text.on('submit', (data) => {
+    // show loading
+
+    loadingWidget.load('Searching packages, please wait...');
     if (data) {
       search(data).then((results) => {
         packages = results;
         const temp = results.map((r) => r.name);
+        loadingWidget.stop();
+        screen.append(searchResults);
+        searchResults.hidden = false;
         searchResults.setItems(temp);
         searchResults.focus();
         screen.render();
@@ -72,17 +78,28 @@ module.exports = function () {
     }
   });
 
+  const loadingWidget = blessed.loading({
+    parent: screen,
+    top: 'center',
+    left: 'center',
+    height: 'shrink',
+    width: 'shrink',
+    border: 'line',
+    hidden: true,
+  });
+
   const searchResults = blessed.list({
     parent: screen,
-    top: '10%+1',
-    left: '35%+1',
-    width: '65%',
-    height: '90%-3',
+    top: 'center',
+    left: 'center',
+    width: '50%',
+    height: '50%',
     label: 'Search Results',
     keys: true,
     vi: true,
     style: theme.searchResults.style,
     border: theme.searchResults.border,
+    hidden: true,
   });
 
   searchResults.on('select', (node) => {
@@ -106,10 +123,9 @@ module.exports = function () {
   screen.append(logo);
   screen.append(searchBox);
 
-  screen.append(searchResults);
-
   const homePage = initHomePage(screen);
   homePage.show();
+  screen.append(loadingWidget);
 
   screen.render();
 };

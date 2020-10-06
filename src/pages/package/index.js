@@ -1,6 +1,5 @@
 'use strict';
 
-const { manifest } = require('libnpm');
 module.exports = function (screen, pkg) {
   const readme = require('./widgets/readme')(screen, pkg);
   const sidebar = require('./widgets/sidebar')(screen, pkg);
@@ -21,10 +20,6 @@ module.exports = function (screen, pkg) {
     screen.append(description);
     screen.render();
   }
-
-  manifest(pkg.name).then((data) => {
-    console.log(Object.keys(data));
-  });
 
   return { hide, show };
 };

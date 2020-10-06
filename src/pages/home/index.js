@@ -8,8 +8,8 @@ module.exports = function (screen) {
   function hide() {
     taskList.detach();
     footer.detach();
+    nodeInfo.detach();
     screen.render();
-    nodeInfo.render();
   }
 
   function show() {
