@@ -11,6 +11,7 @@ Features:
 - Run your project tasks from
 - Install a selected package with one keystroke
 - Run other npm tasks within your project
+- Mnemonic key-bindings for installing packages
 
 
 ## Install
@@ -44,10 +45,13 @@ npmx
 You can press `q` to quit the program at any time.
 
 ### How do I scroll the package readme?
-You can use `up` and `down` array to scroll. And you can also make use of vim navigation keys like `j,k,gg,G` to scroll.
+You can use `up` and `down` arrow keys to scroll. And you can also make use of vim navigation keys like `j,k,gg,G` to scroll.
 
 ### How can I see the keyboard shortcuts for navigating?
 The keyboard shortcuts will be displayed at the bottom of the screen for each page.
+
+### How do I close the project task terminal after the task is completed?
+Press `Esc` to close the terminal window for project tasks.
 
 ### Does it support vi/vim navigation keys in the lists?
 Yes. You can use j,k,gg,G,l and /
