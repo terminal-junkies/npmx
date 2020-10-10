@@ -41,6 +41,9 @@ npmx
 ### How do I quit this thing?
 You can press `q` to quit the program at any time.
 
+### How do I scroll the package readme?
+You can use `up` and `down` array to scroll. And you can also make use of vim navigation keys like `j,k,gg,G` to scroll.
+
 ### How can I see the keyboard shortcuts for navigating?
 The keyboard shortcuts will be displayed at the bottom of the screen for each page.
 
