@@ -1,5 +1,5 @@
 {
-  "name": "npmx",
+  "name": "@terminal-junkies/npmx",
   "version": "1.0.0",
   "description": "An advanced CLI for npm",
   "main": "index.js",
@@ -20,7 +20,7 @@
   ],
   "author": "Rajasegar Chandran <rajasegar.c@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/rajasegar/npmx",
+  "repository": "https://github.com/terminal-junkies/npmx",
   "dependencies": {
     "@terminal-junkies/neo-blessed": "^1.0.4",
     "blessed": "^0.1.81",
