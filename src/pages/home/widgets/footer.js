@@ -1,6 +1,6 @@
 'use strict';
 
-const blessed = require('blessed');
+const blessed = require('@blessed/neo-blessed');
 const getTheme = require('@utils/getTheme');
 const runCommand = require('@utils/runCommand');
 

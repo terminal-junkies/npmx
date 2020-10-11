@@ -1,6 +1,6 @@
 'use strict';
 
-const contrib = require('blessed-contrib');
+const contrib = require('@blessed/blessed-contrib');
 const getTheme = require('@utils/getTheme');
 const githubReadme = require('github-readme');
 

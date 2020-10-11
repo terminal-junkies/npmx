@@ -1,7 +1,6 @@
 'use strict';
 
-const blessed = require('blessed');
-const neoblessed = require('@terminal-junkies/neo-blessed');
+const blessed = require('@blessed/neo-blessed');
 const getTheme = require('@utils/getTheme');
 
 module.exports = function (screen, pkg) {
@@ -12,7 +11,7 @@ module.exports = function (screen, pkg) {
     const {
       terminal: { border, style },
     } = theme;
-    const terminal = neoblessed.terminal({
+    const terminal = blessed.terminal({
       parent: screen,
       top: 'center',
       left: 'center',
