@@ -1,8 +1,8 @@
 'use strict';
 
 const blessed = require('blessed');
-const getTheme = require('utils/getTheme');
-const runCommand = require('utils/runCommand');
+const getTheme = require('@utils/getTheme');
+const runCommand = require('@utils/runCommand');
 
 module.exports = function (screen) {
   const theme = getTheme();

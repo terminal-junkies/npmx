@@ -2,7 +2,7 @@
 
 const blessed = require('blessed');
 const neoblessed = require('@terminal-junkies/neo-blessed');
-const getTheme = require('utils/getTheme');
+const getTheme = require('@utils/getTheme');
 
 module.exports = function (screen, pkg) {
   const packageName = pkg.name;
