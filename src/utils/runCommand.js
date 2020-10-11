@@ -1,6 +1,6 @@
 'use strict';
 
-const neoblessed = require('@terminal-junkies/neo-blessed');
+const neoblessed = require('@blessed/neo-blessed');
 const getTheme = require('./getTheme');
 
 module.exports = function runCommand(screen, cmd) {

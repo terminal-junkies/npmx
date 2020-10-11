@@ -1,6 +1,6 @@
 'use strict';
 
-const blessed = require('@terminal-junkies/neo-blessed');
+const blessed = require("@blessed/neo-blessed");
 const { search } = require('libnpm');
 const minimist = require('minimist');
 const screen = blessed.screen({

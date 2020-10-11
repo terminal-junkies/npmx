@@ -1,6 +1,6 @@
 'use strict';
 
-const blessed = require('@terminal-junkies/neo-blessed');
+const blessed = require("@blessed/neo-blessed");
 const getTheme = require('@utils/getTheme');
 
 module.exports = function (screen, pkg) {

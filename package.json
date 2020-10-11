@@ -22,9 +22,8 @@
   "license": "MIT",
   "repository": "https://github.com/terminal-junkies/npmx",
   "dependencies": {
-    "@terminal-junkies/neo-blessed": "^1.0.4",
-    "blessed": "^0.1.81",
-    "blessed-contrib": "^4.8.20",
+    "@blessed/blessed-contrib": "^1.0.1",
+    "@blessed/neo-blessed": "^1.0.0",
     "blessed-themes": "^1.1.0",
     "github-readme": "^1.0.0",
     "libnpm": "^3.0.1",
