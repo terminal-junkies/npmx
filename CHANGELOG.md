@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/terminal-junkies/npmx/compare/v1.0.2...v1.0.3) (2020-10-11)
+
+
+### Bug Fixes
+
+* searchbox fg color to fg ([0dcb1a8](https://github.com/terminal-junkies/npmx/commit/0dcb1a812d7a0777b25e7153c18ddbe03ee2891c))
+
 ## [1.0.2](https://github.com/terminal-junkies/npmx/compare/v1.0.1...v1.0.2) (2020-10-11)
 
 
