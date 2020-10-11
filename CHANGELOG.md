@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/terminal-junkies/npmx/compare/v1.0.3...v1.0.4) (2020-10-11)
+
+
+### Bug Fixes
+
+* replace blessed-contrib with @blessed/blessed-contrib ([7885977](https://github.com/terminal-junkies/npmx/commit/78859779e709cf74eb7e7f640f5a87abfd525fd4))
+
 ## [1.0.3](https://github.com/terminal-junkies/npmx/compare/v1.0.2...v1.0.3) (2020-10-11)
 
 
