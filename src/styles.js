@@ -30,7 +30,7 @@ module.exports = function (colors) {
         bg: background,
       },
       style: {
-        fg: cyan,
+        fg: foreground,
         bg: background,
       },
     },
