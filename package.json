@@ -1,6 +1,6 @@
 {
   "name": "@terminal-junkies/npmx",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "An advanced CLI for npm",
   "main": "index.js",
   "scripts": {
