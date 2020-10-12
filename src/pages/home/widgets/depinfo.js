@@ -1,11 +1,12 @@
 'use strict';
 
 const blessed = require('@blessed/neo-blessed');
+const getTheme = require('../../../utils/getTheme');
 
 module.exports = function (screen) {
+  const theme = getTheme();
   const message = blessed.message({
     parent: screen,
-    border: 'line',
     height: 'shrink',
     width: 'half',
     top: 'center',
@@ -15,6 +16,8 @@ module.exports = function (screen) {
     keys: true,
     hidden: true,
     vi: true,
+    border: theme.message.border,
+    style: theme.message.style,
   });
 
   return message;

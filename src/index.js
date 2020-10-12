@@ -2,15 +2,12 @@
 
 const blessed = require('@blessed/neo-blessed');
 const { search } = require('libnpm');
-const minimist = require('minimist');
 const screen = blessed.screen({
   fullUnicode: true,
 });
 
-const options = minimist(process.argv.slice(2));
-const scheme = options.theme || 'Dracula';
-const colors = require(`blessed-themes/themes/${scheme}`);
-const theme = require('./styles')(colors.colors);
+const getTheme = require('./utils/getTheme');
+const theme = getTheme();
 
 const initHomePage = require('./pages/home');
 const initPackagePage = require('./pages/package');

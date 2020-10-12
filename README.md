@@ -26,6 +26,17 @@ npm install --global @terminal-junkies/npmx
 npmx
 ```
 
+## Color Schemes
+The CLI can use a different color scheme other than the default one. Please set the `theme` value to any 
+one of the themes from [blessed-themes](https://github.com/blessedjs/blessed-themes) in your config file at `~/.config/.npmx.json`
+The Default theme used is `Dracula`. The config file will be automatically created on the first time of invoking the CLI, if not you can also create manually in the below format.
+
+```json
+{
+  "theme": "Dracula"
+}
+```
+
 ## Screenshots
 
 [![asciicast](https://asciinema.org/a/7ajz46JAVDVR9nV5ZMwhLLzAT.svg)](https://asciinema.org/a/7ajz46JAVDVR9nV5ZMwhLLzAT)

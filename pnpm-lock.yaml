@@ -5,7 +5,6 @@ dependencies:
   common-tags: 1.8.0
   github-readme: 1.0.0
   libnpm: 3.0.1
-  minimist: 1.2.5
   module-alias: 2.2.2
 devDependencies:
   '@commitlint/cli': 11.0.0
@@ -5279,7 +5278,6 @@ specifiers:
   github-readme: ^1.0.0
   husky: ^4.3.0
   libnpm: ^3.0.1
-  minimist: ^1.2.5
   module-alias: ^2.2.2
   prettier: ^2.1.2
   semantic-release: ^17.1.2

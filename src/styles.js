@@ -265,5 +265,25 @@ module.exports = function (colors) {
         },
       },
     },
+    message: {
+      border: {
+        type: 'line',
+        fg: foreground,
+        bg: background,
+      },
+      style: {
+        bg: background,
+        fg: foreground,
+        focus: {
+          border: {
+            fg: green,
+          },
+        },
+        label: {
+          fg: foreground,
+          bg: background,
+        },
+      },
+    },
   };
 };
