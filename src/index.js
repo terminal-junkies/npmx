@@ -20,15 +20,17 @@ module.exports = function () {
   program.bg(theme.program.bg);
   program.fg(theme.program.fg);
 
+  const pkg = require('../package.json');
   const logo = blessed.box({
     parent: screen,
-    content: 'npmx',
+    content: `{bold}npmx ${pkg.version}{/}`,
     top: 0,
     left: 0,
     width: '35%',
     height: '10%',
     border: theme.logo.border,
     style: theme.logo.style,
+    tags: true,
   });
 
   const searchBox = blessed.form({
