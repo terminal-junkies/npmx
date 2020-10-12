@@ -285,5 +285,63 @@ module.exports = function (colors) {
         },
       },
     },
+    prompt: {
+      style: {
+        bg: colors.primary.background,
+        fg: colors.primary.foreground,
+        border: {
+          type: 'line',
+          bg: colors.primary.background,
+          fg: colors.normal.blue,
+        },
+        okay: {
+          bg: colors.normal.green,
+          fg: colors.normal.black,
+        },
+        cancel: {
+          bg: colors.normal.red,
+          fg: colors.normal.black,
+        },
+
+        input: {
+          bg: colors.primary.background,
+          fg: colors.primary.foreground,
+          border: {
+            type: 'line',
+            bg: colors.primary.background,
+            fg: colors.primary.foreground,
+          },
+        },
+      },
+    },
+    confirmDialog: {
+      style: {
+        bg: colors.primary.background,
+        fg: colors.primary.foreground,
+        border: {
+          type: 'line',
+          bg: colors.primary.background,
+          fg: colors.normal.blue,
+        },
+        okay: {
+          bg: colors.normal.green,
+          fg: colors.normal.black,
+        },
+        cancel: {
+          bg: colors.normal.red,
+          fg: colors.normal.black,
+        },
+
+        input: {
+          bg: colors.primary.background,
+          fg: colors.primary.foreground,
+          border: {
+            type: 'line',
+            bg: colors.primary.background,
+            fg: colors.primary.foreground,
+          },
+        },
+      },
+    },
   };
 };

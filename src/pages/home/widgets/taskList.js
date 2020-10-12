@@ -3,6 +3,7 @@
 const blessed = require('@blessed/neo-blessed');
 const getTheme = require('@utils/getTheme');
 const runCommand = require('@utils/runCommand');
+const getManifest = require('@utils/getManifest');
 
 module.exports = function (screen) {
   const theme = getTheme();
@@ -20,7 +21,8 @@ module.exports = function (screen) {
     border: theme.taskList.border,
   });
 
-  const pkg = require(process.cwd() + '/package.json');
+  const pkg = getManifest();
+
   taskList.setItems(Object.keys(pkg.scripts));
 
   taskList.on('select', (node) => {

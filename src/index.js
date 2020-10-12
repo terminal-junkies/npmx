@@ -7,6 +7,8 @@ const screen = blessed.screen({
 });
 
 const getTheme = require('./utils/getTheme');
+const getManifest = require('./utils/getManifest');
+const runCommand = require('./utils/runCommand');
 const theme = getTheme();
 
 const initHomePage = require('./pages/home');
@@ -125,6 +127,21 @@ module.exports = function () {
   const homePage = initHomePage(screen);
   homePage.show();
   screen.append(loadingWidget);
+
+  const manifest = getManifest();
+  if (!manifest.name) {
+    const confirmDialog = require('./pages/home/widgets/confirmDialog')(screen);
+    screen.append(confirmDialog);
+    screen.render();
+    confirmDialog.ask(
+      'Looks like you are not inside an npm project. Do you want to create one?',
+      (err, value) => {
+        if (value) {
+          runCommand(screen, 'npm init');
+        }
+      }
+    );
+  }
 
   screen.render();
 };

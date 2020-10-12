@@ -36,8 +36,10 @@ module.exports = function (screen) {
   deps.key('tab', () => {
     devdeps.focus();
   });
+
   devdeps.key('tab', () => {
     taskList.focus();
   });
+
   return { hide, show };
 };

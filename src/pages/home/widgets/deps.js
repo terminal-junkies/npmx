@@ -3,6 +3,7 @@
 const blessed = require('@blessed/neo-blessed');
 const getTheme = require('../../../utils/getTheme');
 const showDepInfo = require('../../../utils/showDepInfo');
+const getManifest = require('../../../utils/getManifest');
 
 module.exports = function (screen) {
   const theme = getTheme();
@@ -20,8 +21,8 @@ module.exports = function (screen) {
     border: theme.taskList.border,
   });
 
-  const pkg = require(process.cwd() + '/package.json');
-  const items = Object.keys(pkg.dependencies) || [];
+  const pkg = getManifest();
+  const items = pkg.dependencies ? Object.keys(pkg.dependencies) : [];
   deps.setItems(items);
   deps.setLabel(` Dependencies (${items.length}) `);
 

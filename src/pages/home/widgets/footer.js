@@ -1,8 +1,8 @@
 'use strict';
 
 const blessed = require('@blessed/neo-blessed');
-const getTheme = require('@utils/getTheme');
-const runCommand = require('@utils/runCommand');
+const getTheme = require('../../../utils/getTheme');
+const runCommand = require('../../../utils/runCommand');
 
 module.exports = function (screen) {
   const theme = getTheme();
@@ -18,6 +18,24 @@ module.exports = function (screen) {
     vi: true,
     style: theme.footer.style,
     commands: {
+      //init: {
+      //keys: ['n'],
+      //callback: function () {
+      //runCommand(screen, 'npm init');
+      //},
+      //},
+      install: {
+        keys: ['i'],
+        callback: function () {
+          const prompt = require('./prompt')(screen);
+          screen.append(prompt);
+          prompt.input('Enter package name: ', '', (err, value) => {
+            if (value) {
+              runCommand(screen, `npm install --save ${value}`);
+            }
+          });
+        },
+      },
       search: {
         keys: ['/'],
         callback: function () {

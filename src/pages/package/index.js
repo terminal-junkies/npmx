@@ -21,5 +21,12 @@ module.exports = function (screen, pkg) {
     screen.render();
   }
 
+  readme.key('tab', () => {
+    sidebar.focus();
+  });
+
+  sidebar.key('tab', () => {
+    readme.focus();
+  });
   return { hide, show };
 };
