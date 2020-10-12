@@ -17,6 +17,7 @@ jobs:
       run: yarn lint
 
   build-and-deploy:
+    needs: ['lint']
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     steps:
