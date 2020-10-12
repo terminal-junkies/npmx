@@ -20,7 +20,7 @@ module.exports = function (screen) {
     border: theme.taskList.border,
   });
 
-  const pkg = require('../../../../package.json');
+  const pkg = require(process.cwd() + '/package.json');
   const items = Object.keys(pkg.dependencies) || [];
   deps.setItems(items);
   deps.setLabel(` Dependencies (${items.length}) `);

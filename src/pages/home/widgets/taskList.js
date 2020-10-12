@@ -20,7 +20,7 @@ module.exports = function (screen) {
     border: theme.taskList.border,
   });
 
-  const pkg = require('@root/package.json');
+  const pkg = require(process.cwd() + '/package.json');
   taskList.setItems(Object.keys(pkg.scripts));
 
   taskList.on('select', (node) => {
