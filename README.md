@@ -33,6 +33,9 @@ npmx
 ### Home
 ![home page](screenshots/home.png)
 
+### Dependency Info
+![dep info ](screenshots/dep-info.png)
+
 ### Search
 ![search page](screenshots/search.png)
 
@@ -47,7 +50,10 @@ You can press `q` to quit the program at any time.
 ### How do I scroll the package readme?
 You can use `up` and `down` arrow keys to scroll. And you can also make use of vim navigation keys like `j,k,gg,G` to scroll.
 
-### How can I see the keyboard shortcuts for navigating?
+### How do I close the Dependency Info popup?
+Press `Esc` to close the popup.
+
+### How can I see the keyboard shortcuts?
 The keyboard shortcuts will be displayed at the bottom of the screen for each page.
 
 ### How do I close the project task terminal after the task is completed?
