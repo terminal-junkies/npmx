@@ -9,10 +9,10 @@ module.exports = function (screen) {
 
   const taskList = blessed.list({
     parent: screen,
-    top: '30%+1',
+    top: '40%+1',
     left: 0,
     width: '35%',
-    height: '30%',
+    height: '60%-3',
     label: 'Project Tasks',
     keys: true,
     vi: true,

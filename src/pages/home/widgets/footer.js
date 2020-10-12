@@ -40,6 +40,37 @@ module.exports = function (screen) {
           runCommand(screen, 'npm outdated');
         },
       },
+      publish: {
+        keys: ['p'],
+        callback: function () {
+          runCommand(screen, 'npm publish');
+        },
+      },
+      version: {
+        keys: ['v'],
+        callback: function () {
+          const versions = blessed.list({
+            items: ['patch', 'minor', 'major'],
+            top: 'center',
+            left: 'center',
+            width: '25%',
+            height: '25%',
+            label: ' Versions ',
+            border: theme.taskList.border,
+            style: theme.taskList.style,
+            keys: true,
+            vi: true,
+          });
+          screen.append(versions);
+          versions.focus();
+          versions.on('select', (node) => {
+            const { content } = node;
+            versions.detach();
+            runCommand(screen, `npm version ${content}`);
+          });
+          screen.render();
+        },
+      },
     },
   });
 

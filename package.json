@@ -25,6 +25,7 @@
     "@blessed/blessed-contrib": "^1.0.1",
     "@blessed/neo-blessed": "^1.0.0",
     "blessed-themes": "^1.1.0",
+    "common-tags": "^1.8.0",
     "github-readme": "^1.0.0",
     "libnpm": "^3.0.1",
     "minimist": "^1.2.5",

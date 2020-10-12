@@ -10,7 +10,7 @@ module.exports = function (screen) {
   const box = blessed.box({
     top: '10%+1',
     left: 0,
-    height: '20%',
+    height: '30%',
     width: '35%',
     label: ' Node.js Info ',
     border,

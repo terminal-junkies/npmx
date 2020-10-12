@@ -2,6 +2,7 @@ dependencies:
   '@blessed/blessed-contrib': 1.0.1
   '@blessed/neo-blessed': 1.0.0
   blessed-themes: 1.1.0
+  common-tags: 1.8.0
   github-readme: 1.0.0
   libnpm: 3.0.1
   minimist: 1.2.5
@@ -1031,6 +1032,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
+  /common-tags/1.8.0:
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
   /compare-func/2.0.0:
     dependencies:
       array-ify: 1.0.0
@@ -5264,6 +5271,7 @@ specifiers:
   '@semantic-release/changelog': ^5.0.1
   '@semantic-release/git': ^9.0.0
   blessed-themes: ^1.1.0
+  common-tags: ^1.8.0
   eslint: ^7.10.0
   eslint-config-prettier: ^6.12.0
   eslint-plugin-node: ^11.1.0

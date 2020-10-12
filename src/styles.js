@@ -245,5 +245,25 @@ module.exports = function (colors) {
         },
       },
     },
+    bigtext: {
+      border: {
+        type: 'line',
+        fg: foreground,
+        bg: background,
+      },
+      style: {
+        bg: background,
+        fg: foreground,
+        focus: {
+          border: {
+            fg: green,
+          },
+        },
+        label: {
+          fg: foreground,
+          bg: background,
+        },
+      },
+    },
   };
 };
