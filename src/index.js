@@ -6,6 +6,9 @@ const screen = blessed.screen({
   fullUnicode: true,
 });
 
+const { stripIndents } = require('common-tags');
+const expansions = require('npm-expansions');
+
 const getTheme = require('./utils/getTheme');
 const getManifest = require('./utils/getManifest');
 const runCommand = require('./utils/runCommand');
@@ -22,7 +25,6 @@ module.exports = function () {
   const pkg = require('../package.json');
   const logo = blessed.box({
     parent: screen,
-    content: `{bold}npmx ${pkg.version}{/}`,
     top: 0,
     left: 0,
     width: '35%',
@@ -31,6 +33,15 @@ module.exports = function () {
     style: theme.logo.style,
     tags: true,
   });
+
+  function getRandomInt() {
+    return Math.floor(Math.random() * Math.floor(expansions.length));
+  }
+  const logoContent = stripIndents`{bold}npmx ${pkg.version}{/}
+  {red-fg}❤{/} ${expansions[getRandomInt()]}
+  `;
+
+  logo.setContent(logoContent);
 
   const searchBox = blessed.form({
     parent: screen,

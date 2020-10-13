@@ -19,7 +19,7 @@ module.exports = function (colors) {
         bg: background,
       },
       style: {
-        fg: red,
+        fg: foreground,
         bg: background,
       },
     },

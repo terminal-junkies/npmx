@@ -8,6 +8,7 @@ dependencies:
   github-readme: 1.0.0
   libnpm: 3.0.1
   module-alias: 2.2.2
+  npm-expansions: 2.2.5
 devDependencies:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
@@ -3296,6 +3297,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-gqkfgGePhTpAEgUsGEgcq1rqPXA+tv/aVBlgEzfXwA1yiUJF7xtEt3CtVwOjNYQOVknDk0F20w58Fnm3EtG0fA==
+  /npm-expansions/2.2.5:
+    dev: false
+    resolution:
+      integrity: sha512-KkQ0xWAKM2zj0IPUcEuQ9zCecWkyKZIDK14MW+A66RMXlB9XtaYD8bCmdiTt9Pnj0XUSegbF4oF3hgFDADUX+w==
   /npm-lifecycle/3.1.5:
     dependencies:
       byline: 5.0.0
@@ -5312,5 +5317,6 @@ specifiers:
   husky: ^4.3.0
   libnpm: ^3.0.1
   module-alias: ^2.2.2
+  npm-expansions: ^2.2.5
   prettier: ^2.1.2
   semantic-release: ^17.2.1
