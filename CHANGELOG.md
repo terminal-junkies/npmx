@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/terminal-junkies/npmx/compare/v1.2.0...v1.2.1) (2020-10-13)
+
+
+### Bug Fixes
+
+* layout design changes in package page ([449239b](https://github.com/terminal-junkies/npmx/commit/449239b05d08e066117fe3232fef532b4d3fe769))
+* upgrade semantic-release ([bf208d8](https://github.com/terminal-junkies/npmx/commit/bf208d8182fcfce520921a6c2a13d82d7a9ea742))
+
 ## [1.0.4](https://github.com/terminal-junkies/npmx/compare/v1.0.3...v1.0.4) (2020-10-11)
 
 
