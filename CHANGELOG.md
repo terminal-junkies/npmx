@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/terminal-junkies/npmx/compare/v1.2.1...v1.3.0) (2020-10-13)
+
+
+### Features
+
+* add npm expansions in logo text ([260f477](https://github.com/terminal-junkies/npmx/commit/260f4775a538ef9afa1130eb645a2a0c69096084))
+
 ## [1.2.1](https://github.com/terminal-junkies/npmx/compare/v1.2.0...v1.2.1) (2020-10-13)
 
 
