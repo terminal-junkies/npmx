@@ -11,15 +11,15 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
-  '@semantic-release/changelog': 5.0.1_semantic-release@17.1.2
-  '@semantic-release/git': 9.0.0_semantic-release@17.1.2
+  '@semantic-release/changelog': 5.0.1_semantic-release@17.2.1
+  '@semantic-release/git': 9.0.0_semantic-release@17.2.1
   eslint: 7.10.0
   eslint-config-prettier: 6.12.0_eslint@7.10.0
   eslint-plugin-node: 11.1.0_eslint@7.10.0
   eslint-plugin-prettier: 3.1.4_eslint@7.10.0+prettier@2.1.2
   husky: 4.3.0
   prettier: 2.1.2
-  semantic-release: 17.1.2_semantic-release@17.1.2
+  semantic-release: 17.2.1_semantic-release@17.2.1
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.10.4:
@@ -401,13 +401,13 @@ packages:
       '@types/node': 14.11.8
     resolution:
       integrity: sha512-UZ1pErDue6bZNjYOotCNveTXArOMZQFG6hKJfOnGnulVCMcVVi7YIIuuR4WfBhjo7zgpmzn/BkPDnUXtNx+PcQ==
-  /@semantic-release/changelog/5.0.1_semantic-release@17.1.2:
+  /@semantic-release/changelog/5.0.1_semantic-release@17.2.1:
     dependencies:
       '@semantic-release/error': 2.2.0
       aggregate-error: 3.1.0
       fs-extra: 9.0.1
       lodash: 4.17.20
-      semantic-release: 17.1.2_semantic-release@17.1.2
+      semantic-release: 17.2.1_semantic-release@17.2.1
     dev: true
     engines:
       node: '>=10.18'
@@ -415,7 +415,7 @@ packages:
       semantic-release: '>=15.8.0 <18.0.0'
     resolution:
       integrity: sha512-unvqHo5jk4dvAf2nZ3aw4imrlwQ2I50eVVvq9D47Qc3R+keNqepx1vDYwkjF8guFXnOYaYcR28yrZWno1hFbiw==
-  /@semantic-release/commit-analyzer/8.0.1_semantic-release@17.1.2:
+  /@semantic-release/commit-analyzer/8.0.1_semantic-release@17.2.1:
     dependencies:
       conventional-changelog-angular: 5.0.11
       conventional-commits-filter: 2.0.6
@@ -424,7 +424,7 @@ packages:
       import-from: 3.0.0
       lodash: 4.17.20
       micromatch: 4.0.2
-      semantic-release: 17.1.2_semantic-release@17.1.2
+      semantic-release: 17.2.1_semantic-release@17.2.1
     dev: true
     engines:
       node: '>=10.18'
@@ -436,7 +436,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-9Tj/qn+y2j+sjCI3Jd+qseGtHjOAeg7dU2/lVcqIQ9TV3QDaDXDYXcoOHU+7o2Hwh8L8ymL4gfuO7KxDs3q2zg==
-  /@semantic-release/git/9.0.0_semantic-release@17.1.2:
+  /@semantic-release/git/9.0.0_semantic-release@17.2.1:
     dependencies:
       '@semantic-release/error': 2.2.0
       aggregate-error: 3.1.0
@@ -446,7 +446,7 @@ packages:
       lodash: 4.17.20
       micromatch: 4.0.2
       p-reduce: 2.1.0
-      semantic-release: 17.1.2_semantic-release@17.1.2
+      semantic-release: 17.2.1_semantic-release@17.2.1
     dev: true
     engines:
       node: '>=10.18'
@@ -454,7 +454,7 @@ packages:
       semantic-release: '>=16.0.0 <18.0.0'
     resolution:
       integrity: sha512-AZ4Zha5NAPAciIJH3ipzw/WU9qLAn8ENaoVAhD6srRPxTpTzuV3NhNh14rcAo8Paj9dO+5u4rTKcpetOBluYVw==
-  /@semantic-release/github/7.1.1_semantic-release@17.1.2:
+  /@semantic-release/github/7.1.1_semantic-release@17.2.1:
     dependencies:
       '@octokit/rest': 17.11.2
       '@semantic-release/error': 2.2.0
@@ -471,7 +471,7 @@ packages:
       mime: 2.4.6
       p-filter: 2.1.0
       p-retry: 4.2.0
-      semantic-release: 17.1.2_semantic-release@17.1.2
+      semantic-release: 17.2.1_semantic-release@17.2.1
       url-join: 4.0.1
     dev: true
     engines:
@@ -480,7 +480,7 @@ packages:
       semantic-release: '>=16.0.0 <18.0.0'
     resolution:
       integrity: sha512-w8CLCvGVKNe2FPOYQ68OFxFVNNha7YRzptnwTZYdjXYtgTDKw0XVfnMSd9NlJeQPYGfQmIhIVPNBU/cA6zUY0A==
-  /@semantic-release/npm/7.0.6_semantic-release@17.1.2:
+  /@semantic-release/npm/7.0.6_semantic-release@17.2.1:
     dependencies:
       '@semantic-release/error': 2.2.0
       aggregate-error: 3.1.0
@@ -493,7 +493,7 @@ packages:
       rc: 1.2.8
       read-pkg: 5.2.0
       registry-auth-token: 4.2.0
-      semantic-release: 17.1.2_semantic-release@17.1.2
+      semantic-release: 17.2.1_semantic-release@17.2.1
       semver: 7.3.2
       tempy: 0.5.0
     dev: true
@@ -503,7 +503,7 @@ packages:
       semantic-release: '>=16.0.0 <18.0.0'
     resolution:
       integrity: sha512-F4judxdeLe8f7+vDva1TkqNc5Tb2tcltZYW0tLtvP2Xt7CD/gGiz7UxAWEOPsXBvIqAP+uTidvGLPl9U3/uRoQ==
-  /@semantic-release/release-notes-generator/9.0.1_semantic-release@17.1.2:
+  /@semantic-release/release-notes-generator/9.0.1_semantic-release@17.2.1:
     dependencies:
       conventional-changelog-angular: 5.0.11
       conventional-changelog-writer: 4.0.17
@@ -515,7 +515,7 @@ packages:
       into-stream: 5.1.1
       lodash: 4.17.20
       read-pkg-up: 7.0.1
-      semantic-release: 17.1.2_semantic-release@17.1.2
+      semantic-release: 17.2.1_semantic-release@17.2.1
     dev: true
     engines:
       node: '>=10.18'
@@ -4346,13 +4346,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-  /semantic-release/17.1.2_semantic-release@17.1.2:
+  /semantic-release/17.2.1_semantic-release@17.2.1:
     dependencies:
-      '@semantic-release/commit-analyzer': 8.0.1_semantic-release@17.1.2
+      '@semantic-release/commit-analyzer': 8.0.1_semantic-release@17.2.1
       '@semantic-release/error': 2.2.0
-      '@semantic-release/github': 7.1.1_semantic-release@17.1.2
-      '@semantic-release/npm': 7.0.6_semantic-release@17.1.2
-      '@semantic-release/release-notes-generator': 9.0.1_semantic-release@17.1.2
+      '@semantic-release/github': 7.1.1_semantic-release@17.2.1
+      '@semantic-release/npm': 7.0.6_semantic-release@17.2.1
+      '@semantic-release/release-notes-generator': 9.0.1_semantic-release@17.2.1
       aggregate-error: 3.1.0
       cosmiconfig: 6.0.0
       debug: 4.2.0
@@ -4383,7 +4383,7 @@ packages:
     peerDependencies:
       semantic-release: '*'
     resolution:
-      integrity: sha512-szYBXm10QjQO5Tb1S2PSkvOBW3MajWJat5EWtx+MzaVT/jquuxf9o+Zn8FC1j157xvJ5p9r1d/MZGslgs7oQQg==
+      integrity: sha512-+xbLWsT9NoibeMMJw4te0pbY4q/Z1gt/vzhB0z9RRNGVyqCgQiK5NUJ11eW6etSyPZ9QFeAMnqO2dzscWUTy2w==
   /semver-compare/1.0.0:
     dev: true
     resolution:
@@ -5313,4 +5313,4 @@ specifiers:
   libnpm: ^3.0.1
   module-alias: ^2.2.2
   prettier: ^2.1.2
-  semantic-release: ^17.1.2
+  semantic-release: ^17.2.1
