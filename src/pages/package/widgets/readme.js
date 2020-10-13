@@ -14,7 +14,7 @@ module.exports = function (screen, pkg) {
     top: '20%+1',
     left: '0',
     width: '70%',
-    height: '75%-1',
+    height: '65%',
     border,
     style,
     keys: true,

@@ -8,15 +8,17 @@ module.exports = function (screen, pkg) {
 
   const { border, style } = theme.box;
   const box = blessed.box({
-    top: '10%+1',
+    parent: screen,
+    top: '85%+1',
     left: 0,
     width: '70%',
-    height: '10%',
-    label: ` ${pkg.name} `,
-    content: ` ${pkg.description} `,
+    height: '10%-1',
+    label: ' Keywords ',
     border,
     style,
   });
+
+  box.setContent(pkg.keywords.join(',  '));
 
   return box;
 };

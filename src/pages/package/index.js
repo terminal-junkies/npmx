@@ -5,11 +5,13 @@ module.exports = function (screen, pkg) {
   const sidebar = require('./widgets/sidebar')(screen, pkg);
   const footer = require('./widgets/footer')(screen, pkg);
   const description = require('./widgets/description')(screen, pkg);
+  const keywords = require('./widgets/keywords')(screen, pkg);
 
   function hide() {
     sidebar.detach();
     readme.detach();
     footer.detach();
+    keywords.detach();
     description.detach();
   }
 
@@ -18,6 +20,7 @@ module.exports = function (screen, pkg) {
     screen.append(readme);
     screen.append(footer);
     screen.append(description);
+    screen.append(keywords);
     screen.render();
   }
 
