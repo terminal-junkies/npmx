@@ -70,6 +70,8 @@ module.exports = function () {
     inputOnFocus: true,
   });
 
+  const searchResults = require('./widgets/searchResults')(screen);
+
   let packages = [];
   text.on('submit', (data) => {
     // show loading
@@ -97,20 +99,6 @@ module.exports = function () {
     height: 'shrink',
     width: 'shrink',
     border: 'line',
-    hidden: true,
-  });
-
-  const searchResults = blessed.list({
-    parent: screen,
-    top: 'center',
-    left: 'center',
-    width: '50%',
-    height: '50%',
-    label: 'Search Results',
-    keys: true,
-    vi: true,
-    style: theme.searchResults.style,
-    border: theme.searchResults.border,
     hidden: true,
   });
 

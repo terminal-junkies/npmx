@@ -95,6 +95,7 @@ module.exports = function (screen, pkg) {
     const deps = Object.keys(info.dependencies || {}).join('\n  ');
 
     dependencies.setContent(deps);
+    dependencies.setLabel(` Dependencies (${deps.length}) `);
 
     sidebar.setContent(_content);
     screen.render();

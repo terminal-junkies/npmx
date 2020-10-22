@@ -5,7 +5,7 @@ const { stripIndents } = require('common-tags');
 
 module.exports = function (screen, dependency, manifest, dev = false) {
   const depInfo = require('../pages/home/widgets/depinfo')(screen);
-  const loading = require('../pages/home/widgets/loading')(screen);
+  const loading = require('../widgets/loading')(screen);
   screen.append(loading);
   loading.load('Fetching package info');
   screen.append(depInfo);

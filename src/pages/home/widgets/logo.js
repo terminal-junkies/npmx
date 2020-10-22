@@ -11,7 +11,7 @@ module.exports = function (screen) {
     content: 'npmx',
     top: '10%+1',
     left: '35%+1',
-    width: '65%',
+    width: '35%',
     height: '30%',
     border: theme.bigtext.border,
     style: theme.bigtext.style,
