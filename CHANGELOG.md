@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/terminal-junkies/npmx/compare/v1.3.0...v1.4.0) (2020-10-22)
+
+
+### Features
+
+* add discover packages widget in home page ([48b05cc](https://github.com/terminal-junkies/npmx/commit/48b05cc18d38902a20cd4e18d7ddaeafa27914ff))
+
 # [1.3.0](https://github.com/terminal-junkies/npmx/compare/v1.2.1...v1.3.0) (2020-10-13)
 
 
