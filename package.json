@@ -24,6 +24,7 @@
   "dependencies": {
     "@blessed/blessed-contrib": "^1.0.1",
     "@blessed/neo-blessed": "^1.0.0",
+    "@blessed/utils": "^2.0.1",
     "@octokit/rest": "^18.0.6",
     "blessed-themes": "^1.1.0",
     "common-tags": "^1.8.0",

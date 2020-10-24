@@ -1,6 +1,7 @@
 dependencies:
   '@blessed/blessed-contrib': 1.0.1
   '@blessed/neo-blessed': 1.0.0
+  '@blessed/utils': 2.0.1
   '@octokit/rest': 18.0.6
   blessed-themes: 1.1.0
   common-tags: 1.8.0
@@ -76,6 +77,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-RdaOrmvUBCJwRPXSndJgCOQDUxIfwV3+17mhjNHemyYEsZoS6gSdnm7NyGVcnNxOY63ohAAlyw4gOVhKujaWhA==
+  /@blessed/utils/2.0.1:
+    dependencies:
+      '@blessed/neo-blessed': 1.0.0
+    dev: false
+    resolution:
+      integrity: sha512-svsCdAnzLqPxZ8LLi5pSE+z8CNXMAXlbWVOYLxc6Jtktf7xWBCMo7U4Jpud3bcBBgvYuS+uq71HzKqHxPfyUKg==
   /@commitlint/cli/11.0.0:
     dependencies:
       '@babel/runtime': 7.11.2
@@ -5301,6 +5308,7 @@ packages:
 specifiers:
   '@blessed/blessed-contrib': ^1.0.1
   '@blessed/neo-blessed': ^1.0.0
+  '@blessed/utils': ^2.0.1
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
   '@octokit/rest': ^18.0.6

@@ -1,11 +1,12 @@
 'use strict';
 
 const blessed = require('@blessed/neo-blessed');
-const getTheme = require('../../../utils/getTheme');
-const runCommand = require('../../../utils/runCommand');
+const { BlessedUtils } = require('@blessed/utils');
 
 module.exports = function (screen) {
-  const theme = getTheme();
+  const styles = require('../../../styles');
+  const bu = new BlessedUtils(screen, '.npmx.json', styles);
+  const theme = bu.getTheme();
   const footer = blessed.listbar({
     parent: screen,
     bottom: 0,
@@ -31,7 +32,7 @@ module.exports = function (screen) {
           screen.append(prompt);
           prompt.input('Enter package name: ', '', (err, value) => {
             if (value) {
-              runCommand(screen, `npm install --save ${value}`);
+              bu.runCommand(`npm install --save ${value}`);
             }
           });
         },
@@ -49,19 +50,19 @@ module.exports = function (screen) {
       audit: {
         keys: ['a'],
         callback: function () {
-          runCommand(screen, 'npm audit');
+          bu.runCommand('npm audit');
         },
       },
       outdated: {
         keys: ['o'],
         callback: function () {
-          runCommand(screen, 'npm outdated');
+          bu.runCommand('npm outdated');
         },
       },
       publish: {
         keys: ['p'],
         callback: function () {
-          runCommand(screen, 'npm publish');
+          bu.runCommand('npm publish');
         },
       },
       version: {
@@ -84,7 +85,7 @@ module.exports = function (screen) {
           versions.on('select', (node) => {
             const { content } = node;
             versions.detach();
-            runCommand(screen, `npm version ${content}`);
+            bu.runCommand(`npm version ${content}`);
           });
           screen.render();
         },
